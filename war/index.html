@@ -1,0 +1,92 @@
+<html>
+<head>
+
+<link rel="shortcut icon" type="image/png" href="img/ti_logo.png"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+	<link rel="apple-touch-icon"
+		  href="img/apple_ti_logo.png" />
+	<link rel="apple-touch-icon-precomposed"
+		  href="img/android_ti_logo.png" />
+		  
+	<!-- Android icons -->
+	<link href="img/android_ti_logo.png" rel="icon" sizes="192x192" />
+	
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Select a Tutor</title>  
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<!--  <link rel="stylesheet" href="css/mycss2.css">	  -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(e.target).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('#myTab a[href="' + activeTab + '"]').tab('show');
+    }
+});
+</script>
+<script type="text/javascript">
+    function OpenLink(theLink){
+        window.location.href = theLink.href;
+    }
+</script>
+    <style type="text/css">
+	.bs-example{
+		margin: 20px;
+	}
+    </style>
+</head>
+<body>
+ 
+ <div><h1>Existing Classes:</h1></div>
+ <div> (none yet)</div>
+ <p></p>
+ <p></p>
+ 
+ <p> Interesting in signing up for a class? You can do so via the form below.</p>
+
+<!--
+<div>  
+<form action="internetcomputingservlet" method="post">
+    Your name: <input type="text" name="myname">
+    Your email address: <input type="text" name="email">
+    <input type="submit" value="submit">
+</form>
+</div>
+-->
+
+
+<form class="form-horizontal" role="form" action="internetcomputingservlet" method="post">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="myname">Name:</label>
+    <div class="col-sm-5"> 
+      <input type="text" class="form-control" name="myname" placeholder="Enter name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" name="email" placeholder="Enter email">
+    </div>
+  </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-5">
+      <input type="submit" value="submit">
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

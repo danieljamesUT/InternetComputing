@@ -1,0 +1,42 @@
+occupiedred {
+	color: red;
+}
+
+vacantgreen{
+	color: dodgerblue;
+}
+
+.table {
+	background-color: white !important;
+}
+
+table th {
+            background-color:#e60000;
+            color:white;
+    }
+
+.nav-tabs {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+}
+.nav-tabs>li {
+  float: none;
+}
+
+h3{
+    font-size: 22px;}
+}
+
+tbody tr:nth-child(even) {
+   background-color: #ccc !important;
+}
+
+container {
+  position:relative;
+}
+child {
+  position:absolute;
+  bottom:0;
+}
